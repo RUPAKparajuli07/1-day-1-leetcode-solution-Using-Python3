@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Sum Problem Solution Documentation</title>
+    <style>
+        /* Reset default browser styles */
+        body,
+        h1,
+        h2,
+        p,
+        ul,
+        ol,
+        li,
+        code {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 15px;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Styling for Conclusion section */
+        .conclusion {
+            background-color: #e0e0e0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        /* Styling for Time and Space Complexity sections */
+        .complexity {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .complexity h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .complexity ul {
+            list-style: none;
+        }
+
+        .complexity li {
+            margin-bottom: 5px;
+        }
+
+        /* Styling for Algorithm section */
+        .algorithm {
+            margin-top: 20px;
+        }
+
+        .algorithm ol {
+            counter-reset: step;
+        }
+
+        .algorithm ol li {
+            counter-increment: step;
+            margin-bottom: 15px;
+        }
+
+        .algorithm ol li::before {
+            content: counter(step) ".";
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        /* Styling for Follow Me button */
+        .follow-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .follow-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Two Sum Problem Solution Documentation</h1>
+
+        <h2>1. Problem Statement:</h2>
+        <p>Given an array of integers <code>nums</code> and an integer <code>target</code>, the task is to find two
+            numbers in the array such that they add up to the target. It is assumed that each input will have exactly
+            one solution, and the same element cannot be used twice.</p>
+
+        <h2>2. Approach Overview:</h2>
+        <p>The provided solution utilizes a hashmap (dictionary) to efficiently solve the problem with less than O(n^2)
+            time complexity.</p>
+
+        <h2>3. Algorithm:</h2>
+        <ol class="algorithm">
+            <li><strong>Initialization:</strong>
+                <ul>
+                    <li>Initialize an empty dictionary named <code>num_indices</code> to store elements of the array
+                        along with their indices.</li>
+                </ul>
+            </li>
+            <li><strong>Iterating through the Array:</strong>
+                <ul>
+                    <li>Iterate through the array <code>nums</code> using the <code>enumerate</code> function to get
+                        both the index <code>i</code> and the corresponding number <code>num</code>.</li>
+                </ul>
+            </li>
+            <li><strong>Finding the Complement:</strong>
+                <ul>
+                    <li>For each number <code>num</code> in the array, calculate its complement as
+                        <code>target - num</code>. This complement represents the value that, when added to
+                        <code>num</code>, results in the target sum.</li>
+                </ul>
+            </li>
+            <li><strong>Checking Complement Existence:</strong>
+                <ul>
+                    <li>Check if the complement exists in the <code>num_indices</code> dictionary. If it does, it means
+                        we have found two numbers whose sum equals the target.</li>
+                    <li>If the complement exists, return the indices of both numbers, where the index of the complement
+                        is retrieved from the dictionary and the current index <code>i</code> represents the index of
+                        the current number.</li>
+                </ul>
+            </li>
+            <li><strong>Storing Elements and Indices:</strong>
+                <ul>
+                    <li>If the complement does not exist in the dictionary, store the current number <code>num</code>
+                        along with its index <code>i</code> in the <code>num_indices</code> dictionary. This allows for
+                        efficient lookup of complements in subsequent iterations.</li>
+                </ul>
+            </li>
+            <li><strong>Handling No Solution Case:</strong>
+                <ul>
+                    <li>If no solution is found after iterating through the entire array, return an empty list,
+                        indicating that no such pair of numbers exist in the array that adds up to the target.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2>4. Time Complexity Analysis:</h2>
+        <ul class="complexity">
+            <li><strong>Time Complexity:</strong> O(n)</li>
+            <li>The algorithm iterates through the array once, performing constant-time lookups in the dictionary for
+                each element. Therefore, the overall time complexity is linear, O(n).</li>
+        </ul>
+
+        <h2>5. Space Complexity:</h2>
+        <ul class="complexity">
+            <li><strong>Space Complexity:</strong> O(n)</li>
+            <li>The space complexity is linear as well because the dictionary <code>num_indices</code> can store at most
+                <code>n</code> elements, where <code>n</code> is the length of the input array <code>nums</code>.</li>
+        </ul>
+
+        <h2 class="conclusion">6. Conclusion:</h2>
+        <p>The provided algorithm efficiently solves the Two Sum problem with less than O(n^2) time complexity by
+            utilizing a hashmap to store elements and their indices, resulting in a linear time complexity solution.</p>
+
+        <a href="https://leetcode.com/Prupak-07/" class="follow-button">Follow me on LeetCode</a>
+
+    </div>
+</body>
+
+</html>
