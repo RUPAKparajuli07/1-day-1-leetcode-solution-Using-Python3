@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Median of Two Sorted Arrays - Documentation</title>
+<style>
+    /* CSS for styling */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .documentation {
+        margin-top: 20px;
+    }
+
+    .documentation h2 {
+        color: #007bff;
+        margin-top: 20px;
+    }
+
+    .documentation p {
+        margin-bottom: 10px;
+    }
+
+    .follow-button {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 10px;
+        text-align: center;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        border: none; /* Remove default link underline */
+        cursor: pointer; /* Add pointer cursor on hover */
+        transition: background-color 0.3s; /* Add smooth transition */
+    }
+
+    .follow-button:hover {
+        background-color: #0056b3;
+    }
+
+    .algorithm {
+        margin-top: 20px;
+    }
+
+    .algorithm h2 {
+        color: #007bff;
+        margin-top: 20px;
+    }
+
+    .algorithm p {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Median of Two Sorted Arrays - Documentation</h1>
+
+    <div class="documentation">
+        <h2>Problem Statement:</h2>
+        <p>Given two sorted arrays nums1 and nums2 of size m and n respectively, find the median of the two sorted arrays.</p>
+
+        <h2>Approach:</h2>
+        <p>The problem can be solved using a binary search approach. We find the kth smallest element in the combined array of nums1 and nums2. If the total length of both arrays is odd, we return the kth element directly. If it's even, we return the average of the kth and (k+1)th elements.</p>
+
+        <h2>Complexity:</h2>
+        <p>The time complexity of the solution is O(log(min(m, n))) where m and n are the lengths of nums1 and nums2 respectively.</p>
+    </div>
+
+    <!-- Algorithm section -->
+    <div class="algorithm">
+        <h2>Algorithm:</h2>
+        <p>1. Calculate the total length of the combined arrays, `total_len = len(nums1) + len(nums2)`.</p>
+        <p>2. Determine whether the total length is odd or even:</p>
+        <ul>
+            <li>If it's odd, the median will be the single middle element.</li>
+            <li>If it's even, the median will be the average of the two middle elements.</li>
+        </ul>
+        <p>3. Define a helper function `find_kth(nums1, nums2, k)` to find the kth smallest element in the combined arrays:</p>
+        <ul>
+            <li>Ensure `nums1` is smaller or equal in length to `nums2`.</li>
+            <li>Handle base cases.</li>
+            <li>Divide `k` into two parts and search recursively.</li>
+        </ul>
+        <p>4. Call the `find_kth` function to find the median element(s).</p>
+    </div>
+
+    <!-- Follow me on LeetCode button with link -->
+    <a href="https://leetcode.com/your-profile" class="follow-button">Follow me on LeetCode</a>
+</div>
+
+</body>
+</html>
