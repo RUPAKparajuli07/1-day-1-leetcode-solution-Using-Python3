@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longest Palindromic Substring Algorithm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            margin: 20mm auto;
+            padding: 10mm;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .algorithm-section {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .code {
+            font-family: Consolas, monospace;
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 10px;
+            overflow-x: auto;
+            border: 1px solid #ddd;
+        }
+
+        .example {
+            margin-top: 30px;
+        }
+
+        .output {
+            font-weight: bold;
+            color: #009688;
+        }
+
+        .follow-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .follow-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <h1>Longest Palindromic Substring Algorithm</h1>
+
+        <div class="algorithm-section">
+            <h2>Algorithm:</h2>
+            <p>The algorithm for finding the longest palindromic substring in a given string involves using dynamic
+                programming.</p>
+            <ol>
+                <li>Initialize a 2D table to store whether substrings are palindromic.</li>
+                <li>Iterate over all substrings of length 1 and mark them as palindromic.</li>
+                <li>Iterate over all substrings of length 2 and mark palindromic if the characters at both ends are the
+                    same.</li>
+                <li>Iterate over substrings of length 3 or more, checking if the characters at both ends are the same
+                    and if the substring between them is palindromic.</li>
+                <li>Keep track of the longest palindromic substring found.</li>
+                <li>Return the longest palindromic substring.</li>
+            </ol>
+        </div>
+
+        <div class="example">
+            <h2>Example:</h2>
+            <p>Let's see an example of how to use the algorithm:</p>
+            <div class="code">
+                <p><strong>Input:</strong> s = "babad"</p>
+                <p><strong>Output:</strong> "bab" or "aba"</p>
+            </div>
+            <div class="code">
+                <p><strong>Input:</strong> s = "cbbd"</p>
+                <p><strong>Output:</strong> "bb"</p>
+            </div>
+        </div>
+<br>
+<br>
+        <center>
+
+            <a href="https://leetcode.com/" class="follow-button" target="_blank">Follow me on LeetCode</a>
+        </center>
+
+    </div>
+</body>
+
+</html>
