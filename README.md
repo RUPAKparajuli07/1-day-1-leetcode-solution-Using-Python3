@@ -28,6 +28,9 @@ Feel free to explore the repository, dive into the problems, and check out my so
 ## Connect with Me
 
 [![Follow Me on LeetCode](https://img.shields.io/static/v1?label=Follow%20Me%20on&message=LeetCode&color=success&logo=leetcode&style=for-the-badge)](https://leetcode.com/Prupak-07/)
+[![Follow Me on Facebook](https://img.shields.io/static/v1?label=Follow%20Me%20on&message=Facebook&color=1877F2&logo=facebook&style=for-the-badge)](https://www.facebook.com/RupakSpammy)
+
+
 
 
 ## Get in Touch
