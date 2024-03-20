@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zigzag Conversion Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        code,
+        .btn {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        pre,
+        .btn {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        h1,
+        h2 {
+            color: #444;
+        }
+
+        .param {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Zigzag Conversion Function Documentation</h1>
+        <p>The Zigzag Conversion function rearranges characters of a string to be read in a zigzag pattern on a
+            specified number of rows.</p>
+
+        <h2>Usage</h2>
+        <p>To use this function, call it with the string and the number of rows as arguments:</p>
+        <pre><code>convert("PAYPALISHIRING", 3)</code></pre>
+
+        <h2>Parameters</h2>
+        <ul>
+            <li><code>s</code>: <span class="param">The string to be converted.</span></li>
+            <li><code>numRows</code>: <span class="param">The number of rows for the zigzag pattern.</span></li>
+        </ul>
+
+        <h2>Examples</h2>
+        <p>Example 1:</p>
+        <pre><code>Input: s = "PAYPALISHIRING", numRows = 3
+Output: "PAHNAPLSIIGYIR"</code></pre>
+
+        <p>Example 2:</p>
+        <pre><code>Input: s = "PAYPALISHIRING", numRows = 4
+Output: "PINALSIGYAHRPI"</code></pre>
+
+        <p>Example 3:</p>
+        <pre><code>Input: s = "A", numRows = 1
+Output: "A"</code></pre>
+
+        <h2>Written Explanation</h2>
+        <p>The function creates a zigzag pattern by distributing characters across multiple rows. It simulates
+            traversing down and up between the rows as it sequentially places characters from the input string into a
+            new string corresponding to each row. Once the end or the start of the rows is reached, the direction of
+            traversal is reversed. The characters in these rows are then concatenated in order to produce the final
+            string that reflects the zigzag pattern.</p>
+
+
+
+        <center>
+            <a href="https://leetcode.com/Prupak-07/" target="_blank" class="btn">Follow Me on LeetCode</a>
+        </center>
+
+    </div>
+</body>
+
+</html>
