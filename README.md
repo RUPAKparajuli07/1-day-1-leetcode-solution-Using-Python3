@@ -27,22 +27,8 @@ Feel free to explore the repository, dive into the problems, and check out my so
 
 ## Connect with Me
 
-You can follow my LeetCode journey and track my progress directly on my LeetCode profile. Feel free to connect with me there!
+[![Follow Me on LeetCode](https://img.shields.io/static/v1?label=Follow%20Me%20on&message=LeetCode&color=success&logo=leetcode&style=for-the-badge)](https://leetcode.com/Prupak-07/)
 
-<center>
-    <a href="https://leetcode.com/Prupak-07/" target="_blank" style="
-        background-color: #0a0; /* Green background */
-        color: white; /* White text */
-        padding: 10px 20px; /* Top and bottom padding, Left and right padding */
-        text-decoration: none; /* No underline */
-        font-family: Arial, sans-serif; /* Font family */
-        font-size: 16px; /* Font size */
-        border-radius: 5px; /* Rounded corners */
-        box-shadow: 0 4px #066; /* Shadow effect */
-        transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
-        display: inline-block; /* Necessary for applying padding and centered alignment */
-    " onmouseover="this.style.backgroundColor='#088';this.style.boxShadow='0 6px #044';" onmouseout="this.style.backgroundColor='#0a0';this.style.boxShadow='0 4px #066';">Follow Me on LeetCode</a>
-</center>
 
 ## Get in Touch
 
