@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Integer Documentation</title>
+    <style>
+        /* Typography */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #eee;
+            line-height: 1.6;
+            background-color: #333;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Layout */
+        .container {
+            width: 21cm;
+            min-height: 29.7cm;
+            padding: 2cm;
+            margin: 1cm auto;
+            border: 1px #555 solid;
+            border-radius: 5px;
+            background: #444;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Box Model */
+        pre {
+            background-color: #555;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #eee;
+        }
+
+        /* Links */
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Miscellaneous */
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Reverse Integer Documentation</h1>
+
+        <p>This documentation explains the implementation of a Python class <code>Solution</code> for reversing an
+            integer.</p>
+
+        <h2>Algorithm:</h2>
+        <ol>
+            <li>Initialize a variable <code>sign</code> to 1 if <code>x</code> is greater than or equal to 0, otherwise
+                -1.</li>
+            <li>Take the absolute value of <code>x</code> to handle the sign.</li>
+            <li>Convert <code>x</code> to a string, reverse it, and convert it back to an integer.</li>
+            <li>Check if the reversed integer is within the 32-bit range (-2^31 to 2^31 - 1).</li>
+            <li>If it is within the range, return the reversed integer; otherwise, return 0.</li>
+        </ol>
+
+        <h2>Example Usage:</h2>
+        <p>Example 1:<br>
+            Input: 123<br>
+            Output: 321</p>
+
+        <p>Example 2:<br>
+            Input: -123<br>
+            Output: -321</p>
+
+        <p>Example 3:<br>
+            Input: 120<br>
+            Output: 21</p>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <center>
+            <a href="https://leetcode.com/Prupak-07/" target="_blank" style="
+                    background-color: #0a0; /* Green background */
+                    color: white; /* White text */
+                    padding: 10px 20px; /* Top and bottom padding, Left and right padding */
+                    text-decoration: none; /* No underline */
+                    font-family: Arial, sans-serif; /* Font family */
+                    font-size: 16px; /* Font size */
+                    border-radius: 5px; /* Rounded corners */
+                    box-shadow: 0 4px #066; /* Shadow effect */
+                    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+                    display: inline-block; /* Necessary for applying padding and centered alignment */
+                " onmouseover="this.style.backgroundColor='#088';this.style.boxShadow='0 6px #044';"
+                onmouseout="this.style.backgroundColor='#0a0';this.style.boxShadow='0 4px #066';">Follow Me on
+                LeetCode</a>
+        </center>
+        <br>
+        <br>
+        <hr>
+
+    </div>
+
+</body>
+
+</html>
