@@ -1,0 +1,91 @@
+# Configuration for Dependabot
+version: 2
+
+# Update schedule
+updates:
+  # Schedule updates for different types of dependencies
+  - package-ecosystem: "npm"   # Example: npm packages
+    directory: "/"            # Look for packages in the root directory
+    schedule:
+      interval: "weekly"     # Check for updates weekly
+      time: "10:00"          # At 10 AM UTC
+    open-pull-requests-limit: 10  # Allow up to 10 open PRs at a time for this ecosystem
+    ignore:
+      - dependency-name: "package-name"  # Ignore a specific package
+        versions: ["1.x"]                # and versions that match this pattern
+      - dependency-name: "another-package"  # Ignore another package
+        versions: ["2.x"]
+
+# Options for how Dependabot should handle pull requests
+pull-request:
+  # Wait a certain number of minutes before creating a pull request for a dependency update
+  wait-approval: 60
+  # If set to false, Dependabot will not create pull requests for any updates
+  enabled: true
+  # Labels to apply to pull requests created by Dependabot
+  labels:
+    - "dependencies"
+  # Branch name prefix to use for Dependabot-created branches
+  branch-prefix: "dependabot/"
+  # Assignees for Dependabot-created pull requests
+  assignees:
+    - "username1"
+    - "username2"
+  # Reviewers to assign to Dependabot-created pull requests
+  reviewers:
+    - "username3"
+    - "username4"
+  # Require pull request reviews before merging
+  review:
+    # Specify the number of approvals required before merging
+    approvals:
+      # Require at least 1 approval
+      required: 1
+    # Specify which types of reviewers can approve pull requests
+    dismiss-stale-reviews: true
+    # Approvals from code owners are required before merging
+    require-code-owner-reviews: true
+
+# Options for how Dependabot should handle security updates
+security-updates:
+  # Automatically open pull requests for any security updates
+  automerge: true
+  # Labels to apply to pull requests created for security updates
+  labels:
+    - "security"
+
+# Configuration for how Dependabot should handle version updates
+versioning-strategy:
+  # Specify the versioning strategy for dependencies
+  commit-message-prefix: "chore(deps): bump"   # Commit message prefix for version updates
+
+# Configuration for how Dependabot should handle package managers
+package-managers:
+  # Options specific to npm package manager
+  - package-ecosystem: "npm"
+    # Specify where to look for package files
+    directory: "/"
+    # Ignore packages matching specific criteria
+    ignore:
+      - dependency-name: "package-name"  # Ignore a specific package
+        versions: ["1.x"]                # and versions that match this pattern
+      - dependency-name: "another-package"  # Ignore another package
+        versions: ["2.x"]
+    # Options specific to pip package manager
+  - package-ecosystem: "pip"
+    # Specify where to look for package files
+    directory: "/"
+    # Ignore packages matching specific criteria
+    ignore:
+      - dependency-name: "package-name"  # Ignore a specific package
+        versions: ["1.x"]                # and versions that match this pattern
+      - dependency-name: "another-package"  # Ignore another package
+        versions: ["2.x"]
+
+# Configuration for how Dependabot should handle version constraints
+version-resolver:
+  # Options for how Dependabot should resolve version constraints
+  ignore:
+    # Ignore constraints specified in a package manager's configuration files
+    - dependency-name: "package-name"
+      type: "all"  # All types of constraints
