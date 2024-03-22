@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String to Integer (atoi) - Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            background-color: black;
+            /* Adding black background color */
+            color: white;
+            /* Adding white text color for better contrast */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        .code {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .follow-button {
+            background-color: #1f8dd6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>String to Integer (atoi) - Documentation</h1>
+        <p>The task is to implement the <code>myAtoi(string s)</code> function, which converts a string to a 32-bit
+            signed integer, similar to C/C++'s <code>atoi</code> function.</p>
+
+        <h2>Problem Statement:</h2>
+        <p>Implement the <code>myAtoi(string s)</code> function, which converts a string to a 32-bit signed integer
+            according to the following algorithm:</p>
+
+        <h2>Algorithm:</h2>
+        <ol>
+            <li><strong>Ignoring Leading Whitespace:</strong>
+                <ul>
+                    <li>Initialize a pointer <code>i</code> to 0.</li>
+                    <li>Iterate through the string <code>s</code> until <code>i</code> reaches the end or encounters a
+                        non-whitespace character.</li>
+                    <li>Increment <code>i</code> until a non-whitespace character is found.</li>
+                </ul>
+            </li>
+            <li><strong>Checking for Sign:</strong>
+                <ul>
+                    <li>Check if the character at position <code>i</code> is '-' or '+'.</li>
+                    <li>If '-', set <code>sign</code> to -1; if '+', set <code>sign</code> to 1.</li>
+                    <li>Increment <code>i</code> accordingly.</li>
+                </ul>
+            </li>
+            <li><strong>Converting Digits:</strong>
+                <ul>
+                    <li>Initialize <code>num</code> to 0.</li>
+                    <li>Iterate through the string starting from position <code>i</code>.</li>
+                    <li>While the character at <code>i</code> is a digit:
+                        <ul>
+                            <li>Convert the character to an integer and add it to <code>num</code> after multiplying
+                                <code>num</code> by 10.
+                            </li>
+                            <li>Increment <code>i</code>.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Clamping to 32-bit Signed Integer Range:</strong>
+                <ul>
+                    <li>Multiply <code>num</code> by <code>sign</code>.</li>
+                    <li>If <code>num</code> is less than -2^31, return -2^31.</li>
+                    <li>If <code>num</code> is greater than 2^31 - 1, return 2^31 - 1.</li>
+                    <li>Otherwise, return <code>num</code>.</li>
+                </ul>
+            </li>
+        </ol>
+        <br>
+        <br>
+        <div class="button">
+            <a class="follow-button" href="https://leetcode.com/Prupak-07/">Follow me on LeetCode</a>
+        </div>
+    </div>
+</body>
+
+</html>
