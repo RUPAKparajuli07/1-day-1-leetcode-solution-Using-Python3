@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression Matching Explanation</title>
+    <style>
+        body {
+            background-color: #121212;
+            /* Dark background color */
+            color: #ffffff;
+            /* Light text color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 210mm;
+            /* A4 width */
+            height: 297mm;
+            /* A4 height */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #212121;
+            /* Dark container background */
+            border: 1px solid #ffffff;
+        }
+
+        h1 {
+            color: #ffee58;
+            /* Yellow heading color */
+        }
+
+        code {
+            background-color: #424242;
+            /* Dark code background */
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        ol {
+            margin-left: 20px;
+        }
+
+        .follow-button {
+            background-color: #4caf50;
+            /* Green button color */
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .follow-button:hover {
+            background-color: #388e3c;
+            /* Darker green on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Regular Expression Matching Explanation</h1>
+        <p>
+            Regular Expression Matching is a classic problem in computer science. It involves matching a given input
+            string <code>s</code> against a pattern <code>p</code> that may contain special characters like '.' (matches
+            any single character) and '*' (matches zero or more of the preceding element).
+        </p>
+        <p>
+            Here's how the algorithm works:
+        <ol>
+            <li>Initialize a dynamic programming table to store intermediate results.</li>
+            <li>Handle base cases such as an empty string or a pattern starting with '*'.</li>
+            <li>Iterate through the strings <code>s</code> and <code>p</code>, updating the table based on the matching
+                conditions.</li>
+            <li>Return whether the entire <code>s</code> matches the entire <code>p</code> based on the final state of
+                the dynamic programming table.</li>
+        </ol>
+        </p>
+        <p>
+            This problem can be solved efficiently using dynamic programming. The key idea is to use a two-dimensional
+            array to store whether substrings of <code>s</code> and <code>p</code> match. By iterating through both
+            strings and updating the array based on the matching conditions, we can determine if there exists a match
+            between the entire <code>s</code> and <code>p</code>.
+        </p>
+        <p>
+            The solution provided uses this dynamic programming approach to efficiently match regular expressions,
+            covering various scenarios effectively.
+        </p>
+        <br>
+        <br>
+        <br>
+        <center>
+            <button class="follow-button" onclick="window.location.href='https://leetcode.com/Prupak-07/'"> Follow Me on LeetCode</button>
+        </center>
+    </div>
+</body>
+
+</html>
