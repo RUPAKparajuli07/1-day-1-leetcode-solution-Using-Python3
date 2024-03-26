@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integer to Roman Numeral Conversion</title>
+    <style>
+        body {
+            background-color: #212121;
+            /* Dark background */
+            color: #fff;
+            /* Light text */
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .documentation {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .code {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .leetcode-button {
+            background-color: #FFA500;
+            /* Orange */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .leetcode-button:hover {
+            background-color: #FF8C00;
+            /* Darker orange on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Integer to Roman Numeral Conversion</h1>
+    <div class="documentation">
+        <h2>Problem Description</h2>
+        <p>Roman numerals are represented by seven different symbols: I, V, X, L, C, D, and M. This algorithm converts
+            an integer to its Roman numeral representation.</p>
+
+        <h2>Algorithm</h2>
+        <div class="code">
+            <pre><code>class Solution:
+    def intToRoman(self, num: int) -&gt; str:
+        # Define mappings of integers to Roman numerals
+        integer_to_roman = {
+            1000: "M",
+            900: "CM",
+            500: "D",
+            400: "CD",
+            100: "C",
+            90: "XC",
+            50: "L",
+            40: "XL",
+            10: "X",
+            9: "IX",
+            5: "V",
+            4: "IV",
+            1: "I"
+        }
+        
+        # Initialize an empty string to store the Roman numeral representation
+        roman_numeral = ""
+        
+        # Iterate through each integer value and its corresponding Roman numeral
+        for value, numeral in integer_to_roman.items():
+            # Repeat the current Roman numeral as many times as necessary
+            while num &gt;= value:
+                roman_numeral += numeral
+                num -= value
+        
+        return roman_numeral
+
+# Test cases
+sol = Solution()
+print(sol.intToRoman(3))    # Output: "III"
+print(sol.intToRoman(58))   # Output: "LVIII"
+print(sol.intToRoman(1994)) # Output: "MCMXCIV"</code></pre>
+        </div>
+        <br>
+        <br>
+        <div class="button-container">
+            <a href="https://leetcode.com/Prupak-07/" target="_blank" class="leetcode-button">Follow me on
+                LeetCode</a>
+        </div>
+    </div>
+</body>
+
+</html>
