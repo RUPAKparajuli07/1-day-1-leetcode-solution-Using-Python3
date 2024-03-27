@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman to Integer Documentation</title>
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #fff;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        code {
+            background-color: #444;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Roman to Integer Conversion</h1>
+        <h2>Problem Description</h2>
+        <p>Roman numerals are represented by seven different symbols: <code>I</code>, <code>V</code>, <code>X</code>,
+            <code>L</code>, <code>C</code>, <code>D</code>, and <code>M</code>. The goal is to convert a Roman numeral
+            string to an integer.
+        </p>
+
+        <h2>Algorithm</h2>
+        <pre>
+    class Solution:
+        def romanToInt(self, s: str) -&gt; int:
+            roman_map = {
+                'I': 1,
+                'V': 5,
+                'X': 10,
+                'L': 50,
+                'C': 100,
+                'D': 500,
+                'M': 1000
+            }
+            
+            total = 0
+            prev_value = 0
+            
+            for char in s:
+                current_value = roman_map[char]
+                if current_value &gt; prev_value:
+                    total += current_value - 2 * prev_value
+                else:
+                    total += current_value
+                prev_value = current_value
+            
+            return total
+    </pre>
+
+        <h2>Documentation</h2>
+        <p>This algorithm takes a Roman numeral string as input and iterates through each character. It maintains a
+            running total and a previous value to handle cases where subtraction is needed. If the current value is
+            greater than the previous value, it subtracts twice the previous value from the current value to account for
+            the previous addition. Otherwise, it simply adds the current value to the total. Finally, it returns the
+            total integer value.</p>
+        <br>
+        <br>
+        <br>
+        <center>
+
+            <a class="button" href="https://leetcode.com/Prupak-07/" target="_blank">Follow me on LeetCode</a>
+        </center>
+    </div>
+
+</body>
+
+</html>
