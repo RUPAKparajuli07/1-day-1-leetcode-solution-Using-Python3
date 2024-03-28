@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #ffd700;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        pre {
+            background-color: #333;
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        code {
+            color: #ffd700;
+        }
+
+        .follow-button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Documentation</h1>
+        <p>This documentation provides an explanation of the <strong>longestCommonPrefix</strong> function implemented
+            in Python.</p>
+
+        <h2>Problem Description</h2>
+        <p>The <code>longestCommonPrefix</code> function finds the longest common prefix string amongst an array of
+            strings. If there is no common prefix, it returns an empty string.</p>
+
+        <h2>Algorithm</h2>
+        <pre><code>
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -&gt; str:
+        if not strs:
+            return ""
+
+        for i, char in enumerate(strs[0]):
+            for s in strs[1:]:
+                if i &gt;= len(s) or s[i] != char:
+                    return strs[0][:i]
+
+        return strs[0]
+        </code></pre>
+
+        <h2>Example Usage</h2>
+        <p>Example 1:</p>
+        <pre><code>
+Input: strs = ["flower","flow","flight"]
+Output: "fl"
+        </code></pre>
+        <p>Example 2:</p>
+        <pre><code>
+Input: strs = ["dog","racecar","car"]
+Output: ""
+        </code></pre>
+        <br>
+        <br>
+        <center>
+
+            <a href="https://leetcode.com/Prupak-07/" class="follow-button">Follow me on LeetCode</a>
+
+        </center>
+    </div>
+</body>
+
+</html>
