@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3Sum Function Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #e74c3c;
+            text-align: center;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        p,
+        pre {
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>3Sum Function Documentation</h1>
+        <h2>Description</h2>
+        <p>The <code>threeSum</code> function is designed to solve the classic 3Sum problem. Given an integer array, it
+            returns all unique triplets from the array where the sum of the triplet equals zero.</p>
+
+        <h2>Parameters</h2>
+        <ul>
+            <li><code>nums</code>: An array of integers. It represents the input array for which the 3Sum problem needs
+                to be solved.</li>
+        </ul>
+
+        <h2>Return Value</h2>
+        <p>The function returns a list of lists, where each inner list contains three integers that sum up to zero.
+            These lists represent unique triplets found in the input array.</p>
+
+        <h2>Examples</h2>
+        <p><strong>Example 1:</strong></p>
+        <pre>
+            Input: nums = [-1,0,1,2,-1,-4]
+            Output: [[-1,-1,2],[-1,0,1]]
+        </pre>
+        <p><strong>Example 2:</strong></p>
+        <pre>
+            Input: nums = [0,1,1]
+            Output: []
+        </pre>
+        <p><strong>Example 3:</strong></p>
+        <pre>
+            Input: nums = [0,0,0]
+            Output: [[0,0,0]]
+        </pre>
+
+        <h2>Algorithm</h2>
+        <p>The algorithm used by the <code>threeSum</code> function employs a two-pointer approach along with sorting
+            the input array. It iterates through the array, skipping duplicates, and for each element, it uses two
+            pointers to find the other two elements whose sum equals zero.</p>
+        <br>
+        <br>
+        <br>
+
+        <button><a href="https://leetcode.com/Prupak-07/" target="_blank"
+                style="text-decoration: none; color: white;">Follow me on LeetCode</a></button>
+    </div>
+</body>
+
+</html>
