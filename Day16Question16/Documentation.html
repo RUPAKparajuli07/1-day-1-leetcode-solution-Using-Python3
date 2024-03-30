@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3Sum Closest Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #ff9f00;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #333;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        pre {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ff9f00;
+            color: #111;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffa72b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>3Sum Closest Documentation</h1>
+
+        <h2>Description</h2>
+        <p>
+            This function finds three integers in a given array such that their sum is closest to a target integer.
+        </p>
+
+        <h2>Function Signature</h2>
+        <pre><code>def threeSumClosest(self, nums: List[int], target: int) -&gt; int:</code></pre>
+
+        <h2>Parameters</h2>
+        <ul>
+            <li><code>nums</code>: List of integers - The input array.</li>
+            <li><code>target</code>: Integer - The target sum.</li>
+        </ul>
+
+        <h2>Returns</h2>
+        <p>
+            Returns the sum of the three integers that is closest to the target.
+        </p>
+
+        <h2>Example</h2>
+        <pre><code>Input: nums = [-1, 2, 1, -4], target = 1
+Output: 2
+Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).</code></pre>
+
+        <h2>Algorithm</h2>
+        <pre><code>1. Sort the input array <code>nums</code>.
+2. Initialize <code>closest_sum</code> to positive infinity.
+3. Iterate through the array from index 0 to <code>len(nums) - 3</code>:
+    4. Initialize <code>left</code> pointer to <code>i + 1</code> and <code>right</code> pointer to <code>len(nums) - 1</code>.
+    5. While <code>left</code> pointer is less than <code>right</code> pointer:
+        6. Calculate the <code>current_sum</code> as <code>nums[i] + nums[left] + nums[right]</code>.
+        7. If <code>current_sum</code> is equal to <code>target</code>, return <code>target</code>.
+        8. Update <code>closest_sum</code> if the absolute difference between <code>current_sum</code> and <code>target</code> is smaller than the absolute difference between <code>closest_sum</code> and <code>target</code>.
+        9. Move pointers:
+            - If <code>current_sum</code> is less than <code>target</code>, move <code>left</code> pointer to the right.
+            - If <code>current_sum</code> is greater than <code>target</code>, move <code>right</code> pointer to the left.
+10. Return <code>closest_sum</code>.</code></pre>
+
+        <br>
+        <br>
+        <br>
+        <center>
+
+            <a href="https://leetcode.com/Prupak-07/" target="_blank"><button>Follow me on LeetCode</button></a>
+        </center>
+
+    </div>
+</body>
+
+</html>
