@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Documentation</title>
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2 {
+            color: #ffa500;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #ffa500;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ff7f00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Algorithm Documentation</h1>
+        <p>20. Valid Parentheses</p>
+        <p>Solved</p>
+        <p>Easy</p>
+
+        <h2>Topics:</h2>
+        <p>String, Stack</p>
+
+        <h2>Companies:</h2>
+        <p>Google, Amazon, Facebook</p>
+
+        <h2>Hint:</h2>
+        <p>Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input
+            string is valid.</p>
+        <p>An input string is valid if:</p>
+        <ul>
+            <li>Open brackets must be closed by the same type of brackets.</li>
+            <li>Open brackets must be closed in the correct order.</li>
+            <li>Every close bracket has a corresponding open bracket of the same type.</li>
+        </ul>
+
+        <h2>Examples:</h2>
+        <p>Example 1:</p>
+        <p>Input: s = "()"</p>
+        <p>Output: true</p>
+
+        <p>Example 2:</p>
+        <p>Input: s = "()[]{}"</p>
+        <p>Output: true</p>
+
+        <p>Example 3:</p>
+        <p>Input: s = "(]"</p>
+        <p>Output: false</p>
+
+        <h2>Constraints:</h2>
+        <p>1 <= s.length <=10<sup>4</sup></p>
+        <p>s consists of parentheses only '()[]{}'.</p>
+
+        <h2>Algorithm:</h2>
+        <pre>
+class Solution:
+    def isValid(self, s: str) -&gt; bool:
+        stack = []
+        mapping = {')': '(', '}': '{', ']': '['}
+        
+        for char in s:
+            if char in mapping:
+                top_element = stack.pop() if stack else '#'
+                if mapping[char] != top_element:
+                    return False
+            else:
+                stack.append(char)
+        
+        return not stack
+        </pre>
+        <br>
+        <br>
+        <br>
+
+        <center>
+
+            <a href="https://leetcode.com/Prupak-07/" class="button" target="_blank">Follow me on LeetCode</a>
+        </center>
+    </div>
+</body>
+
+</html>
