@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Parentheses Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1f1f1f;
+            color: #ffffff;
+            padding: 1cm 2cm;
+            width: 21cm;
+            height: 29.7cm;
+            margin: auto;
+        }
+
+        h1 {
+            color: #ff8c00;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        code {
+            font-family: monospace;
+            color: #ff69b4;
+        }
+
+        .button {
+            background-color: #ff8c00;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Generate Parentheses Documentation</h1>
+
+    <p><strong>Class:</strong> Solution</p>
+
+    <p><strong>Description:</strong> This class provides a method to generate all combinations of well-formed
+        parentheses for a given number of pairs.</p>
+
+    <p><strong>Method:</strong> generateParenthesis</p>
+
+    <p><strong>Parameters:</strong></p>
+    <ul>
+        <li><code>n</code>: <em>int</em> - The number of pairs of parentheses.</li>
+    </ul>
+
+    <p><strong>Return Value:</strong> <code>List[str]</code> - A list containing all combinations of well-formed
+        parentheses.</p>
+
+    <h2>Example 1:</h2>
+    <p><strong>Input:</strong> n = 3</p>
+    <p><strong>Output:</strong> ["((()))","(()())","(())()","()(())","()()()"]</p>
+
+    <h2>Example 2:</h2>
+    <p><strong>Input:</strong> n = 1</p>
+    <p><strong>Output:</strong> ["()"]</p>
+
+    <p><strong>Constraints:</strong></p>
+    <ul>
+        <li>1 <= n <=8</li>
+    </ul>
+
+    <h2>Algorithm:</h2>
+    <ol>
+        <li>Define a recursive function <code>backtrack</code>.</li>
+        <li>If the length of the current string <code>s</code> is equal to <code>2 * n</code>, add <code>s</code> to the
+            result list.</li>
+        <li>If the count of left parentheses added <code>left</code> is less than <code>n</code>, recursively call
+            <code>backtrack</code> with <code>s + '('</code> and increment <code>left</code>.
+        </li>
+        <li>If the count of right parentheses added <code>right</code> is less than <code>left</code>, recursively call
+            <code>backtrack</code> with <code>s + ')'</code> and increment <code>right</code>.
+        </li>
+        <li>Initialize an empty list <code>result</code> and call <code>backtrack()</code> without any arguments.</li>
+        <li>Return the <code>result</code> list.</li>
+    </ol>
+
+    <br>
+    <br>
+    <br>
+
+    <center>
+
+        <a class="button" href="https://leetcode.com/Prupak-07/">Follow me on LeetCode</a>
+
+    </center>
+
+</body>
+
+</html>
