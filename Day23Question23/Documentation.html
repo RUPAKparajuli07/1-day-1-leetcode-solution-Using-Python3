@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge k Sorted Linked Lists</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0D1117;
+            color: #C9D1D9;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #F0E6FF;
+        }
+
+        h2 {
+            color: #FFC107;
+        }
+
+        p,
+        ol,
+        ul {
+            margin-bottom: 20px;
+        }
+
+        ol,
+        ul {
+            padding-left: 20px;
+        }
+
+        a {
+            color: #58A6FF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #FF6B81;
+            color: #FFF;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #FF4757;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Merge k Sorted Linked Lists</h1>
+        <p>This Python code implements a solution for merging k sorted linked lists using the merge sort algorithm.</p>
+
+        <h2>Algorithm Explanation:</h2>
+        <ol>
+            <li><code>merge(self, left: ListNode, right: ListNode) -&gt; ListNode</code>: This function merges two
+                sorted linked lists <code>left</code> and <code>right</code> into one sorted linked list. It iterates
+                through both lists, comparing elements, and appending the smaller element to the merged list until one
+                of the lists is exhausted. Then, it appends the remaining elements from the non-empty list to the merged
+                list.</li>
+            <li><code>mergeSort(self, lists: List[ListNode], start: int, end: int) -&gt; ListNode</code>: This function
+                implements the merge sort algorithm recursively. It divides the list of linked lists into halves until
+                the base case, where there's only one list left. Then, it merges the lists back together by calling the
+                <code>merge</code> function.
+            </li>
+            <li><code>mergeKLists(self, lists: List[ListNode]) -&gt; ListNode</code>: This is the main function that
+                takes a list of sorted linked lists as input and returns a single sorted linked list. It first checks if
+                the input list is empty and returns <code>None</code> if so. Otherwise, it calls the
+                <code>mergeSort</code> function to merge the lists together.
+            </li>
+        </ol>
+
+        <p>This implementation efficiently handles the merging of k sorted linked lists by utilizing the merge sort
+            algorithm, which has a time complexity of O(n log k), where n is the total number of elements across all
+            lists and k is the number of lists.</p>
+        <br>
+        <br>
+        <br>
+        <center>
+
+            <a href="https://leetcode.com/Prupak-07/" class="button" target="_blank">Follow me on LeetCode</a>
+        </center>
+    </div>
+</body>
+
+</html>
