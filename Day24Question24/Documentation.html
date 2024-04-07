@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Nodes in Pairs Documentation</title>
+    <style>
+        body {
+            background-color: #333;
+            /* Dark background color */
+            color: #fff;
+            /* Light text color */
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #FFA500;
+            /* Orange heading color */
+        }
+
+        h2 {
+            color: #00FFFF;
+            /* Cyan sub-heading color */
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        pre {
+            background-color: #444;
+            /* Darker background color for code */
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .follow-me-button {
+            background-color: #FFA500;
+            /* Orange button color */
+            color: #fff;
+            /* Button text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Swap Nodes in Pairs Documentation</h1>
+
+        <h2>Description</h2>
+        <p>Given a linked list, swap every two adjacent nodes and return its head. The values in the list's nodes are
+            not modified, only the nodes themselves may be changed.</p>
+
+        <h2>Examples</h2>
+        <p><strong>Example 1:</strong></p>
+        <pre>
+Input: head = [1,2,3,4]
+Output: [2,1,4,3]
+        </pre>
+        <p><strong>Example 2:</strong></p>
+        <pre>
+Input: head = []
+Output: []
+        </pre>
+        <p><strong>Example 3:</strong></p>
+        <pre>
+Input: head = [1]
+Output: [1]
+        </pre>
+
+        <h2>Constraints</h2>
+        <ul>
+            <li>The number of nodes in the list is in the range [0, 100].</li>
+            <li>0 <= Node.val <=100</li>
+        </ul>
+
+        <h2>Algorithm</h2>
+        <p>To solve this problem, we traverse the linked list while swapping pairs of adjacent nodes. We keep track of
+            three nodes at a time: the current node, the next node, and the node after the next node. Then, we perform
+            the swapping operation by adjusting the pointers accordingly.</p>
+        <p>If the linked list has less than two nodes, no swapping is needed. We use a dummy node to handle edge cases.
+            Then, we iterate through the list, swapping pairs of adjacent nodes until we reach the end.</p>
+
+        <br>
+        <br>
+        <br>
+        <center>
+                    <a href="https://leetcode.com/Prupak-07/"
+                        style="background-color: #FFA500; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; text-transform: uppercase; font-weight: bold; cursor: pointer;"
+                        target="_blank">Follow me on LeetCode</a>
+                </div>
+        </center>
+
+    </div>
+</body>
+
+</html>
