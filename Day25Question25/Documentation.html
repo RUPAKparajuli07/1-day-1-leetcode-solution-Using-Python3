@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation: Reverse Nodes in k-Group</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #00bfff;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        code {
+            color: #00ff00;
+        }
+
+        .algorithm {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #00bfff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0080ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Documentation: Reverse Nodes in k-Group</h1>
+
+        <p><strong>Reverse Nodes in k-Group</strong></p>
+
+        <p>Given the head of a linked list, reverse the nodes of the list <code>k</code> at a time, and return the
+            modified list.</p>
+
+        <p><code>k</code> is a positive integer and is less than or equal to the length of the linked list. If the
+            number of nodes is not a multiple of <code>k</code>, then left-out nodes, in the end, should remain as they
+            are.</p>
+
+        <p>You may not alter the values in the list's nodes, only nodes themselves may be changed.</p>
+
+        <h2>Example</h2>
+
+        <p><strong>Example 1:</strong></p>
+        <pre>
+Input: head = [1,2,3,4,5], k = 2
+Output: [2,1,4,3,5]
+        </pre>
+
+        <p><strong>Example 2:</strong></p>
+        <pre>
+Input: head = [1,2,3,4,5], k = 3
+Output: [3,2,1,4,5]
+        </pre>
+
+        <h2>Constraints</h2>
+        <ul>
+            <li>The number of nodes in the list is <code>n</code>.</li>
+            <li><code>1 <= k <= n <= 5000</code></li>
+            <li><code>0 <= Node.val <= 1000</code></li>
+        </ul>
+
+        <h2>Follow-up</h2>
+        <p>Can you solve the problem in <code>O(1)</code> extra memory space?</p>
+
+        <div class="algorithm">
+            <h2>Algorithm</h2>
+            <ol>
+                <li>Define a helper function to reverse a sublist of length <code>k</code>.</li>
+                <li>Traverse the linked list in groups of <code>k</code>.</li>
+                <li>Reverse each group of <code>k</code> nodes.</li>
+                <li>Connect the reversed groups properly.</li>
+                <li>Return the new head of the linked list.</li>
+            </ol>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <center>
+
+            <a href="https://leetcode.com/Prupak-07/" class="button" target="_blank">Follow me on LeetCode</a>
+
+        </center>
+    </div>
+</body>
+
+</html>
